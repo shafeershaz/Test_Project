@@ -1,0 +1,31 @@
+<div class="container animated slideInleft" [@EnterLeave]="'flyIn'">
+  <div class="row justify-content-center">
+  <div class="col-md-4 align-self-center">
+   <form formGroup="form">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="form-content col-xs-6">
+          <div class="form-group">
+            <input type="text" class="form-control form-control-sm"  formControlName="username" placeholder="Username" appInputTrim>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control form-control-sm"  formControlName="password" placeholder="Password">
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="align-self-center">
+      <button  mat-raised-button color="primary" type="button"  (click)="login()"> Log in </button>
+        &nbsp;
+        <!--<a class="btn btn-light btn-sm">Register</a>-->
+        &nbsp;
+        <a >Forgot password?</a>
+      </mat-card-actions>
+    </mat-card>
+     </form>
+    </div>
+  </div>
+</div>
