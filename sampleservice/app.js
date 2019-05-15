@@ -1,7 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
-mongoose.connect("mongodb+srv://shaz:Je8F7Cs0TrztwD23@cluster0-e6r4m.mongodb.net/college?retryWrites=true", { 
+mongoose.connect("mongodb://localhost:27017/test", { 
   useNewUrlParser: true,
   useCreateIndex: true
 }).then(()=>{
