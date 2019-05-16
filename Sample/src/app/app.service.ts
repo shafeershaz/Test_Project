@@ -4,7 +4,9 @@ import {
   HttpResponse,
   HttpParams
 } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import { environment } from '../environments/environment';
+import { User } from './shared/user.model';
 
 
 
@@ -15,9 +17,8 @@ const baseUrl = environment.api_url;
 export class AppService {
 
   constructor(private http: HttpClient) { }
-  Test(){
-    this.http.get<{message:string}>(baseUrl + '/api/login').subscribe((data)=>{
-      console.log(data.message)
-    });
+
+  Test(data:User): Observable<HttpResponse<any>>{
+    return this.http.post<HttpResponse<any>>(baseUrl + '/api/login/', data, { observe: 'response' });
   }
 }
